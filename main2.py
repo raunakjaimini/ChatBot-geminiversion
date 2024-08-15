@@ -22,9 +22,9 @@ model = gen_ai.GenerativeModel('gemini-pro')
 # Function to translate roles between Gemini-Pro and Streamlit terminology
 def translate_role_for_streamlit(user_role):
     if user_role == "model":
-        return "Chat-Mate"
+        return "bot"
     else:
-        return "User"
+        return "user"
 
 # Initialize chat session in Streamlit if not already present
 if "chat_session" not in st.session_state:
@@ -43,7 +43,7 @@ def display_message(role, message):
     if role == "user":
         st.markdown(f'<div style="color: grey; padding: 10px; margin: 5px; border-radius: 5px; border: 1px solid grey;"><b>User:</b> {message}</div>', unsafe_allow_html=True)
     else:
-        st.markdown(f'<div style="color: white ; padding: 10px; margin: 5px; border-radius: 5px; border: 1px solid white;"><b>Bot:</b> {message}</div>', unsafe_allow_html=True)
+        st.markdown(f'<div style="color: white ; padding: 10px; margin: 5px; border-radius: 5px; border: 1px solid white;"><b>Chat-Mate:</b> {message}</div>', unsafe_allow_html=True)
 
 
 # Display the chat history

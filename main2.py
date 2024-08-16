@@ -43,7 +43,7 @@ def display_message(role, message):
     if role == "user":
         st.markdown(f'<div style="color: grey; padding: 10px; margin: 5px; border-radius: 5px; border: 1px solid grey;"><b>User:</b> {message}</div>', unsafe_allow_html=True)
     else:
-        st.markdown(f'<div style="color: white ; padding: 10px; margin: 5px; border-radius: 5px; border: 1px solid white;"><b>Chat-Mate:</b> {message}</div>', unsafe_allow_html=True)
+        st.markdown(f'<div style="color: red ; padding: 10px; margin: 5px; border-radius: 5px; border: 1px solid red;"><b>Chat-Mate:</b> {message}</div>', unsafe_allow_html=True)
 
 
 # Display the chat history
